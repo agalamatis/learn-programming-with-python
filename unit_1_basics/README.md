@@ -25,13 +25,13 @@ The order of operations (also called _precedence_) of math operators is similar 
 
 Operation | Expression | Evaluation
 --------- | ---------- | ----------
-exponentiation | 3 ** 2 | 9
-multiplication | 3 * 2 | 6
-float division | 3 / 2 | 1.5
-floor division | 3 // 2 | 1
-modulus/remainder | 3 % 2 | 1
-addition | 3 + 2 | 5
-subtraction | 3 - 2 | 1
+exponentiation | 4 ** 2 | 16
+multiplication | 4 * 2 | 8
+float division | 4 / 2 | 2.0
+integer division | 4 // 2 | 2
+modulus/remainder | 4 % 2 | 0
+addition | 4 + 2 | 6
+subtraction | 4 - 2 | 2
 
 You can use parentheses to override the precedence of operations.
 ```python
