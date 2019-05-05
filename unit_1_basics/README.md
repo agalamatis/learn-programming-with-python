@@ -11,7 +11,7 @@ a_number = 1  # and this is the second comment
           # ... and now a third!
 a_string = "# This is not a comment because it's inside quotes."
 ```
-A good empirical rule to follow for writing useful comments is that _code tells you **how**, while comments tells you **why**_.
+A good empirical rule to follow for writing useful comments is that _code tells you **how**, while comments tell you **why**_.
 
 ## Evaluating Expressions
 ```python
@@ -52,3 +52,18 @@ You can use parentheses to override the precedence of operations.
 SyntaxError: invalid syntax
 ```
 The Python interactive shell couldn’t evaluate the last expression because it's syntax was wrong, therefore it and displayed a `SyntaxError` _error_ message. **Errors are your friends**, unit 4 covers in detail how to use them to our advantage.
+
+## Data types
+A _data type_ is the class of values, and every value belongs to **exactly one** data type.
+
+### Numbers
+The integer (or _int_) data type indicates values that are whole numbers. Numbers with a decimal point, such as 3.14, are called floating-point numbers (or _float_). Note that even though the value 42 is an integer, the value 42.0 would be a floating-point number.
+```python
+>>> type((1 - 3) / 2)
+<class 'float'>
+```
+You can use the _type()_ built-in function to check the data type of a value.
+In addition to int and float, Python supports _Decimal_ and _Fraction_. Python also has built-in support for _complex numbers_, and uses the `j` or `J` suffix to indicate the imaginary part (e.g. `3+5j`).
+The differences between [float](https://docs.python.org/3/tutorial/floatingpoint.html), [decimal](https://docs.python.org/3/library/decimal.html) and [fraction](https://docs.python.org/3/library/fractions.html) are beyond the scope of this tutorial, you can follow the links if you want to know more.
+
+### Strings
