@@ -63,7 +63,6 @@ The integer (or _int_) data type indicates values that are whole numbers. Number
 <class 'float'>
 ```
 You can use the _type()_ built-in function to check the data type of a value.
-In addition to int and float, Python supports _Decimal_ and _Fraction_. Python also has built-in support for _complex numbers_, and uses the `j` or `J` suffix to indicate the imaginary part (e.g. `3+5j`).
-The differences between [float](https://docs.python.org/3/tutorial/floatingpoint.html), [decimal](https://docs.python.org/3/library/decimal.html) and [fraction](https://docs.python.org/3/library/fractions.html) are beyond the scope of this tutorial, you can follow the links if you want to know more.
+In addition to int and float, Python supports _Decimal_ and _Fraction_. Python also has built-in support for _complex numbers_, and uses the `j` or `J` suffix to indicate the imaginary part (e.g. `3+5j`). The differences between [float](https://docs.python.org/3/tutorial/floatingpoint.html), [decimal](https://docs.python.org/3/library/decimal.html) and [fraction](https://docs.python.org/3/library/fractions.html) are beyond the scope of this tutorial, you can follow the links if you want to know more.
 
 ### Strings

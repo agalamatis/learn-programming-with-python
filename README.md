@@ -16,4 +16,4 @@ Units 1-4 are the bare essiantials. After mastering their material, one can:
 * begin using aws-chalice for serverless apps
 * automate basic tasks on his computer
 
-After unit 5 (even though 6 is strongly recommended too) one can begin to learning a web development framework, like Djano or Flask.
+After unit 5 (even though 6 is strongly recommended too) one can begin to learning a web development framework, like Django or Flask.
