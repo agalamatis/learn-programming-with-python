@@ -22,6 +22,7 @@ A good empirical rule to follow for writing useful comments is that _code tells 
 
 ## Precedence of operations
 The order of operations (also called _precedence_) of math operators is similar to that of mathematics. The ** operator is evaluated first; the *, /, //, and % operators are evaluated next from left to right; and finally the + and the - operators are evaluated last, also from left to right.
+
 Operation | Expression | Evaluation
 --------- | ---------- | ----------
 exponentiation | 3 ** 2 | 9
@@ -31,6 +32,7 @@ floor division | 3 // 2 | 1
 modulus/remainder | 3 % 2 | 1
 addition | 3 + 2 | 5
 subtraction | 3 - 2 | 1
+
 You can use parentheses to override the precedence of operations.
 ```python
 >>> 1 + 2 * 3
