@@ -12,3 +12,19 @@ def operation_precedence():
     """
     result = 1 - 3 ** 2 / - 2
     return result
+
+
+def using_brackets():
+    """
+    Add four pairs of brackets to the following expression
+    without altering its value.
+    """
+    pass  # TODO
+
+
+def string_literals():
+    """
+    """
+    abcs = 'abcdefghijklmnopqrstuvwxyz'
+    string = (abcs[15] + abcs[-2]) * 2
+    return string
