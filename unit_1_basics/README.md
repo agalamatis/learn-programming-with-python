@@ -222,4 +222,40 @@ The built-in function len() returns the length of a string:
 ```
 Beyond these basics about strings covered here, there an excellent article about [formatting](https://realpython.com/python-string-formatting/) and it is worth your time to have a quick glance at all [the string methods](https://docs.python.org/3.6/library/stdtypes.html#string-methods).
 
-## Lists
+## Booleans
+While the integer, floating-point, and string data types have an unlimited number of possible values, the `bool` data type has only two values: `True` and `False`. When typed as Python code, the `bool` values `True` and `False` lack the quotes you place around strings, and they always start with a capital T or F, with the rest of the word in lowercase. Like any other value, Boolean values are used in expressions and can be stored in variables.
+```python
+# TODO: examples!!!!!
+```
+
+## Comparison operators
+_Comparison operators_ compare two values and evaluate down to a single Boolean value. They are equals to (`==`), not equals to (`!=`), less than (`<`), greater than (`>`), less than or equal to (`<=`) and greater than or equal to (`>=`). Note that an integer or floating-point value will always be unequal to a string value. The expression `42 == '42'` evaluates to `False` because Python considers the integer 42 to be different from the string '42'.
+```python
+# TODO: examples!!!!!
+```
+Another thing to aware of is that the comparison operators beyond their mathematical interpretation when used on values of _number types_, can be used to compare the items of _compound data strures_ (e.g. _strings_):
+```python
+>>> a = 'a'
+>>> b = 'ab'
+>>> a * 2 == b
+False
+>>> a + 'b' == b
+True
+>>> a < b
+True
+>>> a = 'c'
+>>> a < b
+False
+```
+_You might have noticed that the `==` operator (equal to) has two equal signs, while the `=` operator (assignment) has just one equal sign. In the beginning, it is easy to confuse these two operators with each other._
+
+## Boolean operators
+The three _Boolean operators_ (`and`, `or`, and `not`) are used to compare `bool` values. Like comparison operators, they evaluate these expressions down to a `bool` value. The `and` and `or` operators always take two `bool` values (or expressions), so they are considered _binary_ operators. The `and` operator evaluates an expression to `True` if both `bool` values are `True`; otherwise, it evaluates to `False`. The `or` operator evaluates an expression to `False` if both `bool` values are `False`; otherwise, it evaluates to `True`. Unlike the former two operators, the `not` operator operates on only one Boolean value (or expression), so it is considered _unary_ operators. The `not` operator simply evaluates to the opposite `bool` value. See their _truth tables_ below:
+
+`a` | `b` | `a or b` | `a and b` | `not a` | `not b`
+--- | --- | -------- | --------- | ------- | -------
+`False` | `False` | `False` | `False` | `True` | `True`
+`False` | `True` | `True` | `False` | `True` | `False`
+`True` | `False` | `True` | `False` | `False` | `True`
+`True` | `True` | `True` | `True` | `False` | `False`
+
