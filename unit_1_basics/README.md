@@ -220,3 +220,6 @@ The built-in function len() returns the length of a string:
 >>> len(s)
 34
 ```
+Beyond these basics about strings covered here, there an excellent article about [formatting](https://realpython.com/python-string-formatting/) and it is worth your time to have a quick glance at all [the string methods](https://docs.python.org/3.6/library/stdtypes.html#string-methods).
+
+## Lists
