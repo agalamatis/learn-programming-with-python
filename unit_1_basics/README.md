@@ -141,6 +141,25 @@ The built-in function len() returns the length of a string:
 ```
 Strings will be revisited in unit 3.
 
+## Converting data types
+```python
+>>> 'Alice' + 80
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: must be str, not int
+>>> 42 + '32'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+```
+The first error message `TypeError: must be str, not int` means that Python thought you were trying to concatenate an integer to the string 'Alice'. The second `TypeError: unsupported operand type(s) for +: 'int' and 'str'` means that Python expects a number after the addition operator. The code will have to explicitly convert the integer to a string by using the `str()` and `int()` built-in function (there is also a `float()` one):
+```python
+>>> 'Alice' + str(80)
+'Alice80'
+>>> 42 + int(32)
+74
+```
+
 ## Booleans
 While the integer, floating-point, and string data types have an unlimited number of possible values, the `bool` data type has only two values: `True` and `False`. When typed as Python code, the `bool` values `True` and `False` lack the quotes you place around strings, and they always start with a capital T or F, with the rest of the word in lowercase. Like any other value, Boolean values are used in expressions and can be stored in variables.
 ```python
@@ -178,3 +197,40 @@ The three _Boolean operators_ (`and`, `or`, and `not`) are used to compare `bool
 `True` | `False` | `True` | `False` | `False` | `True`
 `True` | `True` | `True` | `True` | `False` | `False`
 
+Since the _comparison operators_ evaluate to `bool` values, you can use them in _expressions_ with the _boolean operators_:
+```python
+>>> 4 < 5 and 5 < 6
+True
+>>> 4 < 5 and 9 < 6
+False
+>>> 1 == 2 or 2 == 2
+True
+```
+_Comparison operators_ are evaluated after the _numerical operators_ we mentioned already, followed by `not`, then `and` and finally `or`.
+
+## TODO: Simplifying boolean expressions
+
+## Conditions
+
+The _boolean expressions_ we have seen so far could all be considered _conditions_, a subset of expressions; _condition_ is just a more specific name in the context of _flow control statements_. _Conditions_ always evaluate down to a `bool` value, `True` or `False`. A _flow control statement_ decides what to do based on whether its _condition_ is `True` or `False`, and almost every _flow control statement_ uses a _condition_.
+
+## Blocks
+Lines of Python code can be grouped together in blocks. You can tell when a block begins and ends from the indentation of the lines of code. There are three rules for blocks.
+* Blocks begin when the indentation increases.
+* Blocks can contain other blocks.
+* Blocks end when the indentation decreases to zero or to a containing block’s indentation.
+
+## The while loop
+Let's put everything we have seen together and write a program that displays a subsequence of the Fibonacci numbers:
+```python
+>>> a, b = 0, 1
+>>> while b < 1000:
+...     print(b, end=', ')
+...     a, b = b, a + b
+... 
+1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, >>> 
+```
+The first line contains a _multiple assignment_. The variables `a` and `b` simultaneously get the new values `0` and `1`. On the last line this is used again, demonstrating that the expressions on the right-hand side are all evaluated first before any of the assignments take place. The right-hand side expressions are evaluated from the left to the right.
+The `while` _loop_ executes as long as the _condition_ (here: `b < 1000`) remains true. The test used in the example is a simple comparison.
+The _body of the loop_ is the indented _block_ following the while statement. At the interactive prompt, you have to type a tab or space(s) for each indented line. It must be followed by a blank line to indicate completion (since the parser cannot guess when you have typed the last line).
+The _keyword argument_ `end` of the `print()` function can be used to avoid the newline after the output, or end the output with a different string. This is the reason that the promt appears in the same line as the `print()` function's output.
