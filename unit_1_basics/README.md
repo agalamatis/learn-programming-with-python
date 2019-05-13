@@ -231,6 +231,8 @@ Let's put everything we have seen together and write a program that displays a s
 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, >>> 
 ```
 The first line contains a _multiple assignment_. The variables `a` and `b` simultaneously get the new values `0` and `1`. On the last line this is used again, demonstrating that the expressions on the right-hand side are all evaluated first before any of the assignments take place. The right-hand side expressions are evaluated from the left to the right.
+
 The `while` _loop_ executes as long as the _condition_ (here: `b < 1000`) remains true. The test used in the example is a simple comparison.
 The _body of the loop_ is the indented _block_ following the while statement. At the interactive prompt, you have to type a tab or space(s) for each indented line. It must be followed by a blank line to indicate completion (since the parser cannot guess when you have typed the last line).
-The _keyword argument_ `end` of the `print()` function can be used to avoid the newline after the output, or end the output with a different string. This is the reason that the promt appears in the same line as the `print()` function's output.
+
+The _keyword argument_ `end` of the `print()` function can be used to avoid the newline after the output, or end the output with a different string. This is the reason that the promt (`>>>`) appears in the same line as the `print()` function's output.
