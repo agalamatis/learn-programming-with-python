@@ -217,9 +217,9 @@ True
 ```
 _Comparison operators_ are evaluated after the _numerical operators_ we mentioned already, followed by `not`, then `and` and finally `or`.
 
-These 3 operators are the most commonly used because their combinations can produce all 16 [rules of inference](https://en.wikipedia.org/wiki/List_of_rules_of_inference#Table:_Rules_of_Inference), but any other combination of non-negating pairs can too, i.e. in electronics NAND/XOR and used instead of AND/OR. But delving into more detail (_however useful_) is beyond our scope.
+These 3 operators are the most commonly used by programming laanguages and their binary combinations can produce all 16 [rules of inference](https://en.wikipedia.org/wiki/List_of_rules_of_inference#Table:_Rules_of_Inference), but any other combination of two non-self-negating pairs of operators with NOT can do too, i.e. in electronics NAND/XOR and used instead of AND/OR. But delving into more detail (_however useful_) is beyond our scope.
 
-Another issue to be aware of is that conditions can become very complicated very quickly when represented in code from real life scenarios. Mathematical logic provides several tools to simplify them, and when done correctly can provide invaluable insights into the nature of the problem. Again though this is beyond our scope, but you can start reading about how to simplify conditions [here](https://grace.bluegrass.kctcs.edu/~kdunn0001/files/Simplification/4_Simplification_print.html).
+Something else to be aware of is that the combinations of these operations can become very complicated very quickly when representing in code real life scenarios. Mathematical logic provides several methods to simplify them, and when done correctly can provide invaluable insights into the nature of the problems. Again though this is beyond our scope, but you can start reading about how to [simplify logic operations](https://grace.bluegrass.kctcs.edu/~kdunn0001/files/Simplification/4_Simplification_print.html).
 
 ## Conditions
 
