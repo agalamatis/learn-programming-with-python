@@ -2,6 +2,8 @@
 
 We begin with the absolute basics, expressions and flow control with the objective to enable the reader to conceive and write simple programs as soon as possible.
 
+## TODO: Pedantic py-shell intro with import this
+
 ## Comments
 Comments in start with the hash character (#) and extend to the end of the line. A comment may appear at the start of a line or following whitespace or code, but not within a string. A hash character within a string is just a hash character.
 For example:
@@ -156,12 +158,12 @@ The first error message `TypeError: must be str, not int` means that Python thou
 ```python
 >>> 'Alice' + str(80)
 'Alice80'
->>> 42 + int(32)
+>>> 42 + int('32')
 74
 ```
 
 ## Booleans
-While the integer, floating-point, and string data types have an unlimited number of possible values, the `bool` data type has only two values: `True` and `False`. When typed as Python code, the `bool` values `True` and `False` lack the quotes you place around strings, and they always start with a capital T or F, with the rest of the word in lowercase. Like any other value, Boolean values are used in expressions and can be stored in variables.
+While the integer, floating-point, and string data types have an unlimited number of possible values (but still finite), the `bool` data type has only two values: `True` and `False`. When typed as Python code, the `bool` values `True` and `False` lack the quotes you place around strings, and they always start with a capital T or F, with the rest of the word in lowercase. Like any other value, Boolean values are used in expressions and can be stored in variables.
 ```python
 # TODO: examples!!!!!
 ```
@@ -171,7 +173,7 @@ _Comparison operators_ compare two values and evaluate down to a single Boolean 
 ```python
 # TODO: examples!!!!!
 ```
-Another thing to aware of is that the comparison operators beyond their mathematical interpretation when used on values of _number types_, can be used to compare the items of _compound data strures_ (e.g. _strings_):
+Another thing to be aware of is that the comparison operators beyond their mathematical interpretation when used on values of _number types_, can be used to compare the items of _compound data strures_ (e.g. _strings_):
 ```python
 >>> a = 'a'
 >>> b = 'ab'
@@ -181,14 +183,21 @@ False
 True
 >>> a < b
 True
->>> a = 'c'
->>> a < b
-False
+>>> 'C' < a  # alphabetical comparison with all caps being smaller than lower!
+True
 ```
 _You might have noticed that the `==` operator (equal to) has two equal signs, while the `=` operator (assignment) has just one equal sign. In the beginning, it is easy to confuse these two operators with each other._
 
 ## Boolean operators
-The three _Boolean operators_ (`and`, `or`, and `not`) are used to compare `bool` values. Like comparison operators, they evaluate these expressions down to a `bool` value. The `and` and `or` operators always take two `bool` values (or expressions), so they are considered _binary_ operators. The `and` operator evaluates an expression to `True` if both `bool` values are `True`; otherwise, it evaluates to `False`. The `or` operator evaluates an expression to `False` if both `bool` values are `False`; otherwise, it evaluates to `True`. Unlike the former two operators, the `not` operator operates on only one Boolean value (or expression), so it is considered _unary_ operators. The `not` operator simply evaluates to the opposite `bool` value. See their _truth tables_ below:
+The three _Boolean operators_ (`and`, `or`, and `not`) are used to compare `bool` values. Like comparison operators, they evaluate these expressions down to a `bool` value. The `and` and `or` operators always take two `bool` values (or expressions), so they are considered _binary_ operators. 
+
+The `and` operator evaluates an expression to `True` if both `bool` values are `True`; otherwise, it evaluates to `False`. 
+
+The `or` operator evaluates an expression to `False` if both `bool` values are `False`; otherwise, it evaluates to `True`. 
+
+Unlike the former two operators, the `not` operator operates on only one Boolean value (or expression), therefore it is a _unary_ operator. The `not` operator simply evaluates to the opposite `bool` value. 
+
+See their _truth tables_ below:
 
 `a` | `b` | `a or b` | `a and b` | `not a` | `not b`
 --- | --- | -------- | --------- | ------- | -------
@@ -208,7 +217,9 @@ True
 ```
 _Comparison operators_ are evaluated after the _numerical operators_ we mentioned already, followed by `not`, then `and` and finally `or`.
 
-## TODO: Simplifying boolean expressions
+These 3 operators are the most commonly used because their combinations can produce all 16 [rules of inference](https://en.wikipedia.org/wiki/List_of_rules_of_inference#Table:_Rules_of_Inference), but any other combination of non-negating pairs can too, i.e. in electronics NAND/XOR and used instead of AND/OR. But delving into more detail (_however useful_) is beyond our scope.
+
+Another issue to be aware of is that conditions can become very complicated very quickly when represented in code from real life scenarios. Mathematical logic provides several tools to simplify them, and when done correctly can provide invaluable insights into the nature of the problem. Again though this is beyond our scope, but you can start reading about how to simplify conditions [here](https://grace.bluegrass.kctcs.edu/~kdunn0001/files/Simplification/4_Simplification_print.html).
 
 ## Conditions
 
@@ -236,3 +247,7 @@ The `while` _loop_ executes as long as the _condition_ (here: `b < 1000`) remain
 The _body of the loop_ is the indented _block_ following the while statement. At the interactive prompt, you have to type a tab or space(s) for each indented line. It must be followed by a blank line to indicate completion (since the parser cannot guess when you have typed the last line).
 
 The _keyword argument_ `end` of the `print()` function can be used to avoid the newline after the output, or end the output with a different string. This is the reason that the promt (`>>>`) appears in the same line as the `print()` function's output.
+
+## Branching with if-elif-else
+
+## TODO: Simplifying conditions

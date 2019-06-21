@@ -17,3 +17,13 @@ Units 1-4 are the bare essiantials. After mastering their material, one can:
 * automate basic tasks on his computer
 
 After unit 5 (even though 6 is strongly recommended too) one can begin to learning a web development framework, like Django or Flask.
+
+## TODO: getting python 3.6
+TODO: introduce pip now or wait until the end of unit 2 after explaining modules
+
+## TODO: the interpreter
+
+## TODO: venv?
+
+## TODO: The elephant in the room... mathematics
+TODO: The tutorial tries either to skip or very gently introduce mathematical concepts to keep those not versed in the field engaged, while those that are can still see the underlying principles. All that said and writen there is no way around it, to become a decent software engineer, independent of the language one must study mathematics at university level. Many have made careers without, but their roles were tangent to the actual code efficiency, maintainability and readability. Computer science is after all a subdisciplines of mathematics and the more advanced knowledge on has in the field the easier and faster the progress will be with this tutorial, the python language or any other.
