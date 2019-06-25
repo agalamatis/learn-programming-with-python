@@ -278,7 +278,7 @@ More
 ```
 There can be zero or more `elif` parts, and the `else` part is optional. The keyword ‘elif’ is short for ‘else if’, and is useful to avoid excessive indentation. An `if` … `elif` … `elif` … sequence is a substitute for the _switch/case_ statements found in other languages.
 
-TODO: explain shortly input()
+The `input()` function waits for the user to type some text on the keyboard and press ENTER. This function call evaluates to a string equal to the user’s text.
 
 ## The while loop
 Let's put everything we have seen together and write a program that displays a subsequence of the Fibonacci numbers:
