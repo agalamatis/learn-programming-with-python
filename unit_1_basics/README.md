@@ -163,13 +163,43 @@ The first error message `TypeError: must be str, not int` means that Python thou
 ## Booleans
 While the integer, floating-point, and string data types have an unlimited number of possible values (but still finite), the `bool` data type has only two values: `True` and `False`. When typed as Python code, the `bool` values `True` and `False` lack the quotes you place around strings, and they always start with a capital T or F, with the rest of the word in lowercase. Like any other value, Boolean values are used in expressions and can be stored in variables.
 ```python
-# TODO: examples!!!!!
+>>> spam = True
+>>> spam
+True
+>>> true
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'true' is not defined
+>>> True = 2 + 2
+  File "<stdin>", line 1
+SyntaxError: can't assign to keyword
 ```
 
 ## Comparison operators
 _Comparison operators_ compare two values and evaluate down to a single Boolean value. They are equals to (`==`), not equals to (`!=`), less than (`<`), greater than (`>`), less than or equal to (`<=`) and greater than or equal to (`>=`). Note that an integer or floating-point value will always be unequal to a string value. The expression `42 == '42'` evaluates to `False` because Python considers the integer 42 to be different from the string '42'.
 ```python
-# TODO: examples!!!!!
+>>> 42 == 42
+True
+>>> 42 == 99
+False
+>>> 2 != 3
+True
+>>> 2 != 2
+False
+>>> 'hello' == 'hello'
+True
+>>> 'hello' == 'Hello'
+False
+>>> 'dog' != 'cat'
+True
+>>> True == True
+True
+>>> True != False
+True
+>>> 42 == 42.0
+True
+>>> 42 == '42'
+False
 ```
 Another thing to be aware of is that the comparison operators beyond their mathematical interpretation when used on values of _number types_, can be used to compare the items of _compound data strures_ (e.g. _strings_):
 ```python
