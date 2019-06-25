@@ -2,8 +2,6 @@
 
 We begin with the absolute basics, expressions and flow control with the objective to enable the reader to conceive and write simple programs as soon as possible.
 
-## TODO: Pedantic py-shell intro with import this
-
 ## Comments
 Comments in start with the hash character (#) and extend to the end of the line. A comment may appear at the start of a line or following whitespace or code, but not within a string. A hash character within a string is just a hash character.
 For example:
