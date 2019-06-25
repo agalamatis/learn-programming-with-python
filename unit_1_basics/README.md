@@ -231,6 +231,27 @@ Lines of Python code can be grouped together in blocks. You can tell when a bloc
 * Blocks can contain other blocks.
 * Blocks end when the indentation decreases to zero or to a containing block’s indentation.
 
+## Branching with if-elif-else
+Besides the while statement just introduced, Python knows the usual control flow statements known from other languages. The most well-known statement type is the `if` statement. For example:
+```python
+>>> x = int(input("Please enter an integer: "))
+Please enter an integer: 42
+>>> if x < 0:
+...     x = 0
+...     print('Negative changed to zero')
+... elif x == 0:
+...     print('Zero')
+... elif x == 1:
+...     print('Single')
+... else:
+...     print('More')
+...
+More
+```
+There can be zero or more `elif` parts, and the `else` part is optional. The keyword ‘elif’ is short for ‘else if’, and is useful to avoid excessive indentation. An `if` … `elif` … `elif` … sequence is a substitute for the _switch/case_ statements found in other languages.
+
+TODO: explain shortly input()
+
 ## The while loop
 Let's put everything we have seen together and write a program that displays a subsequence of the Fibonacci numbers:
 ```python
@@ -248,6 +269,51 @@ The _body of the loop_ is the indented _block_ following the while statement. At
 
 The _keyword argument_ `end` of the `print()` function can be used to avoid the newline after the output, or end the output with a different string. This is the reason that the promt (`>>>`) appears in the same line as the `print()` function's output.
 
-## Branching with if-elif-else
+## The for loop and range built-in function
+The `while` loop keeps looping while its condition is true, but what if you want to execute a block of code only a certain number of times? You can do this with a for loop statement and the range() function.
+```python
+>>> print('My name is')
+>>> for i in range(5):
+...     print('Jimmy Five Times (' + str(i) + ')')
+... 
+Jimmy Five Times (0)
+Jimmy Five Times (1)
+Jimmy Five Times (2)
+Jimmy Five Times (3)
+Jimmy Five Times (4)
+```
+The code in the `for` loop’s clause is run five times. The first time it is run, the variable `i` is set to `0`. The `print()` call in the clause will print `Jimmy Five Times (0)`. After python finishes an iteration through all the code inside the for loop’s clause, the execution goes back to the top of the loop, and the for statement increments `i` by one. This is why `range(5)` results in five iterations through the clause, with `i` being set to `0`, then `1`, then `2`, then `3`, and then `4`. The variable i will go up to, but will not include, the integer passed to `range()`.
 
-## TODO: Simplifying conditions
+Some _functions_ can be called with multiple arguments separated by a comma, and `range()` is one of them. This lets you change the integer passed to `range()` to follow any sequence of integers, including starting at a number other than zero.
+```python
+>>> for i in range(13, 16):
+...     print(i)
+... 
+13
+14
+15
+```
+The first argument will be where the `for` loop’s variable starts, and the second argument will be up to, but not including, the number to stop at.
+
+The `range()` function can also be called with three arguments. The first two arguments will be the start and stop values, and the third will be the step argument. The step is the amount that the variable is increased by after each iteration.
+```python
+>>> for i in range(4, 10, 2):
+...     print(i)
+... 
+4
+6
+8
+```
+The `range()` function is flexible in the sequence of numbers it produces for for loops. For example, you can even use a negative number for the step argument to make the for loop count down instead of up.
+```python
+>>> for i in range(5, -1, -2):
+...     print(i)
+... 
+5
+3
+1
+```
+
+## break and continue starements
+
+## the pass statement
