@@ -201,7 +201,7 @@ True
 >>> 42 == '42'
 False
 ```
-Another thing to be aware of is that the comparison operators beyond their mathematical interpretation when used on values of _number types_, can be used to compare the items of _compound data strures_ (e.g. _strings_):
+Another thing to be aware of is that the comparison operators beyond their mathematical interpretation when used on values of _number types_, can be used to compare the items of _compound data structures_ (e.g. _strings_):
 ```python
 >>> a = 'a'
 >>> b = 'ab'
@@ -245,7 +245,7 @@ True
 ```
 _Comparison operators_ are evaluated after the _numerical operators_ we mentioned already, followed by `not`, then `and` and finally `or`.
 
-These 3 operators are the most commonly used by programming laanguages and their binary combinations can produce all 16 [rules of inference](https://en.wikipedia.org/wiki/List_of_rules_of_inference#Table:_Rules_of_Inference), but any other combination of two non-self-negating pairs of operators with NOT can do too, i.e. in electronics NAND/XOR and used instead of AND/OR. But delving into more detail (_however useful_) is beyond our scope.
+These 3 operators are the most commonly used by programming languages and their binary combinations can produce all 16 [rules of inference](https://en.wikipedia.org/wiki/List_of_rules_of_inference#Table:_Rules_of_Inference), but any other combination of two non-self-negating pairs of operators with NOT can do too, i.e. in electronics NAND/XOR and used instead of AND/OR. But delving into more detail (_however useful_) is beyond our scope.
 
 Something else to be aware of is that the combinations of these operations can become very complicated very quickly when representing in code real life scenarios. Mathematical logic provides several methods to simplify them, and when done correctly can provide invaluable insights into the nature of the problems. Again though this is beyond our scope, but you can start reading about how to [simplify logic operations](https://grace.bluegrass.kctcs.edu/~kdunn0001/files/Simplification/4_Simplification_print.html).
 
@@ -295,7 +295,7 @@ The first line contains a _multiple assignment_. The variables `a` and `b` simul
 The `while` _loop_ executes as long as the _condition_ (here: `b < 1000`) remains true. The test used in the example is a simple comparison.
 The _body of the loop_ is the indented _block_ following the while statement. At the interactive prompt, you have to type a tab or space(s) for each indented line. It must be followed by a blank line to indicate completion (since the parser cannot guess when you have typed the last line).
 
-The _keyword argument_ `end` of the `print()` function can be used to avoid the newline after the output, or end the output with a different string. This is the reason that the promt (`>>>`) appears in the same line as the `print()` function's output.
+The _keyword argument_ `end` of the `print()` function can be used to avoid the newline after the output, or end the output with a different string. This is the reason that the prompt (`>>>`) appears in the same line as the `print()` function's output.
 
 ## The for loop and range built-in function
 The `while` loop keeps looping while its condition is true, but what if you want to execute a block of code only a certain number of times? You can do this with a for loop statement and the range() function.
@@ -310,7 +310,7 @@ Jimmy Five Times (2)
 Jimmy Five Times (3)
 Jimmy Five Times (4)
 ```
-The code in the `for` loop’s clause is run five times. The first time it is run, the variable `i` is set to `0`. The `print()` call in the clause will print `Jimmy Five Times (0)`. After python finishes an iteration through all the code inside the for loop’s clause, the execution goes back to the top of the loop, and the for statement increments `i` by one. This is why `range(5)` results in five iterations through the clause, with `i` being set to `0`, then `1`, then `2`, then `3`, and then `4`. The variable i will go up to, but will not include, the integer passed to `range()`.
+The code in the `for` loop’s clause is run five times. The first time it is run, the variable `i` is set to `0`. The `print()` call in the clause will print `Jimmy Five Times (0)`. After python finishes an iteration through all the code inside the for loop’s clause, the execution goes back to the top of the loop, and the for statement increments `i` by one. This is why `range(5)` results in five iterations through the clause, with `i` being set to `0`, then `1`, then `2`, then `3`, and then `4`. The variable `i` will go up to, but will not include, the integer passed to `range()`.
 
 Some _functions_ can be called with multiple arguments separated by a comma, and `range()` is one of them. This lets you change the integer passed to `range()` to follow any sequence of integers, including starting at a number other than zero.
 ```python
@@ -343,7 +343,7 @@ The `range()` function is flexible in the sequence of numbers it produces for fo
 ```
 
 ## break and continue statements, and else clauses of loops
-The `break` statement breaks out of the innermost enclosing `for` or `while` loop. Loop statements may have an `else` clause; it is executed when the loop terminates through exhaustion of the itertion (with `for`) or when the condition becomes false (with `while`), but *not* when the loop is terminated by a `break` statement. This is exemplified by the following loop, which searches for prime numbers:
+The `break` statement breaks out of the innermost enclosing `for` or `while` loop. Loop statements may have an `else` clause; it is executed when the loop terminates through exhaustion of the iteration (with `for`) or when the condition becomes false (with `while`), but *not* when the loop is terminated by a `break` statement. This is exemplified by the following loop, which searches for prime numbers:
 ```python
 >>> for n in range(2, 10):
 ...     for x in range(2, n):
